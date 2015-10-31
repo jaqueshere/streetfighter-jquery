@@ -28,6 +28,23 @@ $(document).ready(function() {
 		$('.ryu-ready').show();
 	});
 
+	$('body').keydown(function(event){
+		var letter = event.which;
+		if(letter == 88) {
+			$('.ryu-still').hide();
+			$('.ryu-ready').hide();
+			$('.ryu-cool').show();
+		}
+	});
+
+	$('body').keyup(function(event){
+		var letter = event.which;
+		if(letter == 88) {
+			$('.ryu-cool').hide();
+			$('.ryu-still').show();	
+		}	
+	})
+
 });
 
 function playHadouken () {
